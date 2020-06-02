@@ -6,6 +6,9 @@
 * {
     margin: 0;
     padding: 0;
+    
+    /*torna a borda o padrão da caixa*/
+    box-sizing: border-box;
 }
 
 html {
