@@ -14,6 +14,10 @@
     transition: 4000ms;
 
 }
+/*Quer dizer que o modal tem uma classe hide*/
+#modal.hide {
+    display: none;
+}
 
 #modal .content {
     color: white;
