@@ -56,6 +56,9 @@ for (const item of itemsToCollect) {
     
 }
 
+//array
+let selectedItems = []
+
 function handleSelectedItem(event){
 
     const itemLi =  event.target
@@ -64,4 +67,20 @@ function handleSelectedItem(event){
     itemLi.classList.toggle("selected")
 
     const itemId = itemLi.dataset.id
+    
+    //verificar se existem itens selecionados
+    //pegar os itens selecionados
+    const alreadySelected = selectedItems.findIndex (item => {
+        const itemFound = item == itemId //isso será true ou false
+        return itemFound
+    })
+
+    //se já estivar selecionado, tirar da seleção 
+    if(alreadySelected){
+        
+    }
+
+    //se não tiver selecionado adicionar a seleção
+
+    //atualizar o campo escondido com os itens selecionados
 }
