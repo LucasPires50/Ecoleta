@@ -4,6 +4,7 @@ const server = express()
 //Configurar pasta publica
 server.use(express.static("public"))
 
+
 //Utilizando template engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
@@ -16,10 +17,13 @@ nunjucks.configure("src/views", {
 //req -requisição
 //res -resposta
 server.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html")
+    return res.render("index.html")
 })
 server.get("/ceate-point", (req, res) => {
-    res.sendFile(__dirname + "/views/ceate-point.html")
+    return res.render("ceate-point.html")
+})
+server.get("/search", (req, res) => {
+    return res.render("search-results.html")
 })
 
 //ligar o servidor
