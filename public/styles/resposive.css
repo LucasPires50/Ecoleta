@@ -1,3 +1,18 @@
+
+@media (max-width: 560px) {
+    .items-grid {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media (max-width: 400px) {
+
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 900px) {
     #page-home {
         background-position-x: 70vw;
@@ -27,6 +42,14 @@
     #page-search-results .cards img {
         height: 250px;
     }
+
+    #page-creat-ponit .field-group{
+        flex-direction: column;
+    }
+
+    #page-creat-ponit .field-group .field + .field {
+        margin-left: 0;
+    }
 }
 
 @media (min-width: 1700px) {
@@ -40,3 +63,5 @@
         background-position-y: 200px;
     }
 }
+
+
