@@ -4,6 +4,13 @@ const server = express()
 //Configurar pasta publica
 server.use(express.static("public"))
 
+//Utilizando template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("src/views", {
+    express: server,
+    noCache: true
+})
+
 //Configurar caminhos da aplicação
 //pagina inicial
 //req -requisição
