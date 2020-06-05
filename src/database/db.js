@@ -4,10 +4,13 @@ const sqlite3 = require("sqlite3").verbose()
 //iniciar o objeto que irá fazer operações no banco de dados
 const db = new sqlite3.Database("./src/database/database.db")
 
+//exportadno para o server.js fazer o acesso 
+module.exports = db
+
 //utilizar o objeto de banco de dados para nossas operações
-db.serialize(() => {
+/*db.serialize(() => {
     //criar uma tabela
-    db.run(`
+   db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             image TEXT, 
@@ -35,13 +38,13 @@ db.serialize(() => {
         );
     `
     const values = [
-        "https://images.unsplash.com/photo-1565204265082-49ca193ed380?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80",
-        "Colectoria",
+        "https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80",
+        "Papersider",
         "Guilherme Gemballa, Jardim América",
         "Nº 260",
         "Santa Catarina",
         "Rio do Sul",
-        "Resíduos Eletônicos"
+        "Papéis e Papelão"
     ]
 
     function afterInsertData(err){
@@ -56,12 +59,12 @@ db.serialize(() => {
 
         // Deletar um dado da tabela
 
-        /*db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
+        db.run(`DELETE FROM places WHERE id = ?`, [2], function(err){
             if(err){
                 return console.log(err)
             }
             console.log("Registo deletado com sucesso!")
-        })*/
+        })
 
     //Consultar os dados na tabela
     db.all(`SELECT * FROM places`, function(err, rows) {
@@ -73,4 +76,4 @@ db.serialize(() => {
         console.log(rows)
     })
 
-})
+})*/
