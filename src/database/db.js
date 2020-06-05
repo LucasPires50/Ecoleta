@@ -54,7 +54,23 @@ db.serialize(() => {
 
     db.run(query, values, afterInsertData)
 
-    //Consultar os dados na tabela
+        // Deletar um dado da tabela
 
-    // Deletar um dado da tabela
+        /*db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
+            if(err){
+                return console.log(err)
+            }
+            console.log("Registo deletado com sucesso!")
+        })*/
+
+    //Consultar os dados na tabela
+    db.all(`SELECT * FROM places`, function(err, rows) {
+        if(err){
+            return console.log(err)
+        }
+
+        console.log("Aqui estão os seus registros")
+        console.log(rows)
+    })
+
 })
