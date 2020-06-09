@@ -117,6 +117,10 @@
 {% block modal %}
     {% if saved %}
         {% include "partials/point-created.html"  %}
+        {% include "partials/err-point.html"  %}
+    {% endif %}
+    {% if salvo %}
+        {% include "partials/err-point.html"  %}
     {% endif %}
 {% endblock modal %}
 

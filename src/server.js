@@ -39,7 +39,7 @@ server.post("/savepoint", (req, res) => {
 
     //inserir dados no banco de dados 
     const query = `
-    INSERT INTO bancos (
+    INSERT INT bancos (
         image, 
         name,
         address,
@@ -62,7 +62,7 @@ server.post("/savepoint", (req, res) => {
 function afterInsertData(err){
     if(err){
         console.log(err)
-        return res.send("Erro no cadastro!")
+        return res.render("ceate-point.html", { salvo: true })
     }
     console.log("Cadastrado com sucesso")
     console.log(this)
