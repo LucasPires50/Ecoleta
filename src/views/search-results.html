@@ -25,18 +25,17 @@
 
             <div class="cards">
 
-                {% for place in places %}
+                {% for banco in bancos %}
                     <div class="card">
-                        <img src="{{place.image}}" alt="{{place.name}}">
-                        <h1>{{place.name}}</h1>
-                        <h3>{{place.items}}</h3>
+                        <img src="{{banco.image}}" alt="{{banco.name}}">
+                        <h1>{{banco.name}}</h1>
+                        <h3>{{banco.items}}</h3>
                         <p>
-                            {{place.city}},
-                            {{place.state}}
+                            {{banco.city}}, {{banco.state}}
                             <br/>
-                            {{place.address}}
+                            {{banco.address}}
                             <br/>
-                            {{place.address2}}
+                            {{banco.address2}}
                         </p>
                     </div>
                 {% endfor %}
