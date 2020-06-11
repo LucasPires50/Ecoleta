@@ -1,7 +1,6 @@
 <img align="center" src="github-images/02-LOGO.png" alt="Logo">
 
-<p align="center">
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/VictorObrien/nlw-starter?color=%2304D361">           
+<p align="center">          
   <a aria-label="Repositórios Git" href="https://github.com/LucasPires50">
     <img src="https://img.shields.io/badge/Github-LucasPires50-success?logo=github"></img>
   </a>
